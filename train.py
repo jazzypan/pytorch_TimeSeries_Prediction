@@ -91,7 +91,7 @@ def _parse_args():
 
 
 
-def main():
+if __name__ == '__main__':
     args = _parse_args()
     with open(args.output_dir/ 'config.json') as f:
         params = json.load(f)
@@ -111,7 +111,6 @@ def main():
 
     torch.save(mlp.state_dict(), model_dir)
     
-    return mlp
 
     
 
